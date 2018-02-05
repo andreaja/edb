@@ -1,6 +1,6 @@
 window.addEventListener('load', function() {
 	console.log(document.body.innerText);
-	if (document.body.innerText.match(/robotisering/i)) {
+	if (document.body.innerText.match(/robotisering|digitalisering/i)) {
 		function getTextNodesIn(elem, opt_fnFilter) {
 		  var textNodes = [];
 		  if (elem) {
@@ -22,7 +22,7 @@ window.addEventListener('load', function() {
 		var menu = document;
 		getTextNodesIn(menu, function(textNode, parent) {
 			var t = textNode.nodeValue;
-			var v = t.replace(/(robotisering|roboten|roboter|robot)/ig, "EDB");
+			var v = t.replace(/(robotisering|roboten|roboter|robot|digitaliseringen|digitalisering)/ig, "EDB");
 			if (t !== v) textNode.nodeValue = v;
 		});
 
